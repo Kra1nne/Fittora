@@ -6,8 +6,8 @@ import { Button } from "../ui/button";
 
 const navigationItems = [
   { name: "Home", url: "/" },
-  { name: "About", url: "/about" },
-  { name: "Services", url: "/services" },
+  { name: "The Craft", url: "/craft" },
+  { name: "Collection", url: "/collection" },
   { name: "Contact", url: "/contact" },
 ];
 
@@ -16,7 +16,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between shadow-md sticky py-3 left-0 right-0 top-0 z-50 bg-white">
+    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 bg-white">
       
        {/* Logo */}
         <div className="text-2xl font-bold">

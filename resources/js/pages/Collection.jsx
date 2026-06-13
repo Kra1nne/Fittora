@@ -2,7 +2,7 @@ import React from 'react'
 import PageMeta from '../components/common/PageMeta'
 import Navbar from '../components/layout/navbar'
 
-const Services = () => {
+const Collection = () => {
   return (
     <main>
         <PageMeta title="Services" description="Welcome to the fittora"></PageMeta>
@@ -14,4 +14,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Collection

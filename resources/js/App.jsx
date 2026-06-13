@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
-import About from "./pages/About";
+import Craft from "./pages/Craft";
 import Contact from "./pages/Contact";
-import Services from "./pages/Services";
+import Collection from "./pages/Collection";
 import SignIpPage from "./pages/auth/SignInPage";
 import SignUpPage from "./pages/auth/SignUpPage";
 import Analytics from "./pages/dashboard/analytics";
@@ -16,8 +16,8 @@ function App() {
             <Routes>
                 {/* Landing Page */}
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About/>}/>
-                <Route path="/services" element={<Services/>}/>
+                <Route path="/craft" element={<Craft/>}/>
+                <Route path="/collection" element={<Collection/>}/>
                 <Route path="/contact" element={<Contact/>}/>
 
                 {/* Auth */}

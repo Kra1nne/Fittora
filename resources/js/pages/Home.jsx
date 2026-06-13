@@ -8,6 +8,9 @@ const Home = () => {
             <header>
                 <Navbar></Navbar>
             </header>
+            <div>
+                
+            </div>
             
         </main>
     );
