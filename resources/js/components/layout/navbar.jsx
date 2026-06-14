@@ -16,7 +16,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 bg-white">
+    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 bg-white shadow-md">
       
        {/* Logo */}
         <div className="text-2xl font-bold">
@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-5">
                 {navigationItems.map((item) => (                
                     <div key={item.url}>
-                        <NavLink className={({isActive}) => isActive ? "text-blue-600 font-bold text-primary border-primary" : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block"} to={item.url}>{item.name}</NavLink>
+                        <NavLink className={({isActive}) => isActive ? "font-bold text-primary border-primary" : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block"} to={item.url}>{item.name}</NavLink>
                     </div>
             ))}
         </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className="flex flex-col p-4 gap-4">
                  {navigationItems.map((item) => (                
                         <div key={item.url}>
-                            <NavLink className={({isActive}) => isActive ? "text-blue-600 font-bold text-primary" : "text-gray-700 text-semibold"} to={item.url}>{item.name}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? " font-bold text-primary" : "text-gray-700 text-semibold"} to={item.url}>{item.name}</NavLink>
                         </div>
                 ))}
                 <Link to="/signin">Sign In</Link>
