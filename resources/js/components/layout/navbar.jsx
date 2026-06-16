@@ -8,7 +8,7 @@ const navigationItems = [
   { name: "Home", url: "/" },
   { name: "The Craft", url: "/craft" },
   { name: "Collection", url: "/collection" },
-  { name: "Contact", url: "/contact" },
+  { name: "Map", url: "/map" },
 ];
 
 

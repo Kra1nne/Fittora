@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Craft from "./pages/Craft";
-import Contact from "./pages/Contact";
+import Map from "./pages/Map";
 import Collection from "./pages/Collection";
 import SignIpPage from "./pages/auth/SignInPage";
 import SignUpPage from "./pages/auth/SignUpPage";
@@ -18,7 +18,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/craft" element={<Craft/>}/>
                 <Route path="/collection" element={<Collection/>}/>
-                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/map" element={<Map/>}/>
 
                 {/* Auth */}
                 <Route path="/signup" element={<SignUpPage/>}/>
