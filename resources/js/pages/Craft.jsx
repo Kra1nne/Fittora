@@ -26,7 +26,7 @@ const Craft = () => {
                 <Navbar></Navbar>
             </header>
             <div className='grid grid-cols-1 lg:grid-cols-2 p-3 lg:p-5'>
-              <div className="order-2 lg:order-1 p-5 xl:p-20">
+              <div className="order-2 lg:order-1 p-5 lg:p-20">
                 {loading ? (
                   <Skeleton className="h-65 lg:h-115 w-full" />
                 ) : (
