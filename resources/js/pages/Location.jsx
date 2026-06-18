@@ -3,21 +3,8 @@ import PageMeta from '../components/common/PageMeta'
 import Navbar from '../components/layout/navbar'
 import { Map, MapControls, MapMarker, MarkerLabel, MarkerContent, MarkerTooltip } from "@/components/ui/map"
 import { Card } from "@/components/ui/card"
-//import { useState, useEffect } from 'react'
 
 const Location = () => {
-  // const [position, setPosition] = useState(null);
-
-  // useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition((pos) => {
-  //     setPosition(pos);
-  //   });
-  // }, []);
-  // if (!position) {
-  //   return <div>Getting your location...</div>;
-  // }
-
-  //const start = {name: "Location", lng: position.coords.longitude, lat: position.coords.latitude }
   const end = {name: "Fittora",lng: 124.9827, lat: 10.3865}
   return (
     <main>
@@ -43,13 +30,6 @@ const Location = () => {
                     <MarkerTooltip>{end.name}</MarkerTooltip>
                   </MarkerContent>
                 </MapMarker>
-                 {/* <MapMarker longitude={start.lng} latitude={end.lat}>
-                  <MarkerContent>
-                    <div className="size-5 rounded-full bg-red-500 border-2 border-white shadow-lg" />
-                    <MarkerLabel className="text-primary font-bolder" position="center">{start.name}</MarkerLabel>
-                    <MarkerTooltip>{start.name}</MarkerTooltip>
-                  </MarkerContent>
-                </MapMarker> */}
               </Map>
             </Card>
           </div>

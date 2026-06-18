@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { ModeToggle } from "../ui/mode-toggle";
 
 
 const navigationItems = [
@@ -16,24 +17,27 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 bg-white shadow-md">
+    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 dark:bg-black bg-white shadow-md">
       
        {/* Logo */}
         <div className="text-2xl font-bold">
             <NavLink to="/" className="text-primary">Fittora</NavLink>
         </div>
-        <div className="hidden md:flex gap-5">
+        <div className="hidden md:flex gap-5 ">
                 {navigationItems.map((item) => (                
                     <div key={item.url}>
-                        <NavLink className={({isActive}) => isActive ? "font-bold text-primary border-primary" : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block"} to={item.url}>{item.name}</NavLink>
+                        <NavLink className={({isActive}) => isActive ? "font-bold text-primary border-primary " : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block dark:text-white dark:hover:text-green-500"} to={item.url}>{item.name}</NavLink>
                     </div>
             ))}
         </div>
         <div className="hidden md:flex gap-2">
-            <Button className="rounded-full">
+             <div>
+                <ModeToggle></ModeToggle>
+            </div>
+            <Button >
                 <Link to="/signin">Sign In</Link>
             </Button>
-            <Button variant="outline" className="rounded-full">
+            <Button variant="outline" >
                 <Link to="/signup">Sign Up</Link>
             </Button>
         </div>
