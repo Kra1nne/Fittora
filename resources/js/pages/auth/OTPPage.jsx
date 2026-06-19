@@ -14,12 +14,16 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp"
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 const OTPPage = () => {
   return (
     <main>
       <PageMeta title="OTP" description="Welcome to the fittora"></PageMeta>
       <div className="flex justify-center items-center min-h-screen">
+        <div className='fixed top-4 left-4 z-50'>
+            <ModeToggle></ModeToggle>
+        </div>
         <Card className="w-full max-w-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-4xl font-bold">OTP Verification</CardTitle>

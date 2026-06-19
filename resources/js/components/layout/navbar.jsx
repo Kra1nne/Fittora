@@ -43,16 +43,17 @@ const Navbar = () => {
         </div>
     
 
-        <div className="flex md:hidden">
+        <div className="flex md:hidden gap-2">
+            <ModeToggle></ModeToggle>
             <button onClick={() => setOpen(prev => !prev)}><Menu/></button>
         </div>
         
         {open && (
-            <div className="md:hidden absolute top-13 left-0 w-full bg-white shadow-md">
-            <div className="flex flex-col p-4 gap-4">
+            <div className="md:hidden absolute top-13 left-0 w-full dark:bg-black bg-white shadow-md">
+            <div className="flex flex-col p-4 gap-3">
                  {navigationItems.map((item) => (                
                         <div key={item.url}>
-                            <NavLink className={({isActive}) => isActive ? " font-bold text-primary" : "text-gray-700 text-semibold"} to={item.url}>{item.name}</NavLink>
+                            <NavLink className={({isActive}) => isActive ? " font-bold text-primary" : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block dark:text-white dark:hover:text-green-500"} to={item.url}>{item.name}</NavLink>
                         </div>
                 ))}
                 <Link to="/signin">Sign In</Link>

@@ -1,12 +1,23 @@
 import PageMeta from "../components/common/PageMeta";
 import Navbar from "@/components/layout/navbar";
 import background from "../assets/img/wardrobe.jpg";
+import tshirt from '../assets/img/shirts.png';
 import { Button } from "../components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "@/components/ui/theme-provider";
+
+
 
 const Home = () => {
+    const { theme } = useTheme();
+
+    const isDark =
+        theme === "dark" ||
+        (theme === "system" &&
+            window.matchMedia("(prefers-color-scheme: light)").matches);
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -18,13 +29,14 @@ const Home = () => {
 
         img.onerror = () => setLoading(false);
         img.src = background;
+        img.src = tshirt;
     }, []);
     
     return (
         <main>
             <section className="h-screen bg-cover bg-center"
                     style={{
-                        backgroundImage: loading ? "none" : `url(${background})`,
+                        backgroundImage: loading ? "none" : `url(${isDark ? tshirt : background})`,
                     }}>
                 <PageMeta title="Home" description="Welcome to the fittora"></PageMeta>
                 <header>

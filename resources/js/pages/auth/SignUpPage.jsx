@@ -8,13 +8,17 @@ import { Card,
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import PageMeta from '../../components/common/PageMeta'
+import PageMeta from '../../components/common/PageMeta';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 const SignUpPage = () => {
    return (
     <main>
        <PageMeta title="Sign Up" description="Welcome to the fittora"></PageMeta>
       <div className="flex justify-center items-center min-h-screen">
+        <div className='fixed top-4 left-4 z-50'>
+            <ModeToggle></ModeToggle>
+        </div>
         <Card className="w-full max-w-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-4xl font-bold">Create Account</CardTitle>
