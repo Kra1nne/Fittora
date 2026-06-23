@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-5 ">
                 {navigationItems.map((item) => (                
                     <div key={item.url}>
-                        <NavLink className={({isActive}) => isActive ? "font-bold text-primary border-primary " : "text-gray-700 text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block dark:text-white dark:hover:text-green-500"} to={item.url}>{item.name}</NavLink>
+                        <NavLink className={({isActive}) => isActive ? "font-bold text-primary" : "text-black text-semibold hover:text-primary hover:scale-105 transition-all duration-200 inline-block dark:text-white dark:hover:text-green-500"} to={item.url}>{item.name}</NavLink>
                     </div>
             ))}
         </div>

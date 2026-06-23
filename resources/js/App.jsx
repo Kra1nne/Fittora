@@ -5,10 +5,11 @@ import Location from "./pages/Location";
 import Collection from "./pages/Collection";
 import SignIpPage from "./pages/auth/SignInPage";
 import SignUpPage from "./pages/auth/SignUpPage";
-import Analytics from "./pages/dashboard/analytics";
+import AnalyticsPage from "./pages/dashboard/AnalyticsPage";
 import ResetPage from "./pages/auth/ResetPage";
 import OTPPage from "./pages/auth/OTPPage";
 import NewPasswordPage from "./pages/auth/NewPasswordPage";
+import UserPage from "./pages/user/UserPage";
 
 function App() {
     return (
@@ -28,7 +29,8 @@ function App() {
                 <Route path="/new-password" element={<NewPasswordPage/>}/>
 
                 {/* Pages */}
-                <Route path="/analytics" element={<Analytics/>} />
+                <Route path="/dashboard" element={<AnalyticsPage/>} />
+                <Route path="/user" element={<UserPage/>} />
             </Routes>
         </>
     );
