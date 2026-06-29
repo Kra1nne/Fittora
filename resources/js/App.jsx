@@ -10,6 +10,7 @@ import ResetPage from "./pages/auth/ResetPage";
 import OTPPage from "./pages/auth/OTPPage";
 import NewPasswordPage from "./pages/auth/NewPasswordPage";
 import UserPage from "./pages/user/UserPage";
+import OrderListPage from "./pages/order/OrderListPage";
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                 {/* Pages */}
                 <Route path="/dashboard" element={<AnalyticsPage/>} />
                 <Route path="/user" element={<UserPage/>} />
+                <Route path="/orders" element={<OrderListPage/>}/>
             </Routes>
         </>
     );

@@ -15,6 +15,7 @@ import {
 import {
     Home,
     Users,
+    ListOrdered,
 } from "lucide-react";
 
 const sideBarItem = [
@@ -27,6 +28,11 @@ const sideBarItem = [
     name: 'Users',
     url: '/user',
     icon: <Users />
+  },
+  {
+    name: 'Orders',
+    url: '/orders',
+    icon: <ListOrdered />
   }
 ] 
 const AppSidebar = () => {
@@ -35,7 +41,7 @@ const AppSidebar = () => {
   const isCollapsed = state === "collapsed";
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" >
       <SidebarContent>
         <SidebarGroup>
         <div className="p-4 flex justify-center font-bold text-xl">
@@ -47,7 +53,7 @@ const AppSidebar = () => {
               {sideBarItem.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild>
-                    <Link
+                    <NavLink
                       to={item.url}
                       className={`flex items-center ${
                         isCollapsed ? "justify-center" : "gap-2"
@@ -58,7 +64,7 @@ const AppSidebar = () => {
                       {!isCollapsed && (
                         <span>{item.name}</span>
                       )}
-                    </Link>
+                    </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

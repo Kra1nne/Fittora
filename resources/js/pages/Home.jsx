@@ -48,14 +48,14 @@ const Home = () => {
                             <div className="space-y-2.5">
                                 <Skeleton className="h-4 w-50 md:ful" />
                                 <Skeleton className="h-20 w-60 md:w-150 " />
-                                <Skeleton className="h-8 w-34 md:w-30"/>
+                                <Skeleton className="h-8 w-34 md:w-30 rounded-full"/>
                             </div>
                         </div>
                     ) : (
                         <div className="absolute md:right-40  top-1/2 -translate-y-1/2 text-white px-10">
                             <p className="font-extrabold tracking-widest">The Tailor's Standard</p>
                             <h1 className="text-4xl md:text-6xl font-bold">The Art of the Perfect Fit</h1>
-                            <Button size="lg" className="mt-3 rounded-lg shadow-2xl">
+                            <Button size="lg" className="mt-3 shadow-2xl rounded-full">
                                 <Link to="/collection">Shop Collection</Link>
                             </Button>
                         </div>

@@ -17,7 +17,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 dark:bg-black bg-white shadow-md">
+    <header className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sticky py-5 left-0 right-0 top-0 z-50 bg-background shadow-md">
       
        {/* Logo */}
         <div className="text-2xl font-bold">
@@ -34,10 +34,10 @@ const Navbar = () => {
              <div>
                 <ModeToggle></ModeToggle>
             </div>
-            <Button >
+            <Button className="rounded-full">
                 <Link to="/signin">Sign In</Link>
             </Button>
-            <Button variant="outline" >
+            <Button  className="rounded-full" variant="outline" >
                 <Link to="/signup">Sign Up</Link>
             </Button>
         </div>

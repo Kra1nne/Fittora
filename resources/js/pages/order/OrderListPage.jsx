@@ -1,7 +1,7 @@
 import React from 'react'
 import SidebarLayout from '../../components/layout/sidebarlayout'
 
-const UserPage = () => {
+const OrderListPage = () => {
   return (
     <SidebarLayout>
       <main>
@@ -11,4 +11,4 @@ const UserPage = () => {
   )
 }
 
-export default UserPage
+export default OrderListPage

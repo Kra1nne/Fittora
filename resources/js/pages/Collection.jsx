@@ -78,7 +78,7 @@ const Collection = () => {
                       {loading ? (
                         <Skeleton className="h-5 w-full px-20"/>
                       ) : (
-                        <Button>View Collection</Button>
+                        <Button  className="rounded-full">View Collection</Button>
                       )}
                     </CardFooter>
                 </Card>
@@ -114,7 +114,7 @@ const Collection = () => {
                       {loading ? (
                         <Skeleton className="h-5 w-full px-20"/>
                       ) : (
-                        <Button>View Collection</Button>
+                        <Button  className="rounded-full">View Collection</Button>
                       )}
                     </CardFooter>
                 </Card>
@@ -150,7 +150,7 @@ const Collection = () => {
                       {loading ? (
                         <Skeleton className="h-5 w-full px-20"/>
                       ) : (
-                        <Button>View Collection</Button>
+                        <Button  className="rounded-full">View Collection</Button>
                       )}
                     </CardFooter>
                 </Card>
