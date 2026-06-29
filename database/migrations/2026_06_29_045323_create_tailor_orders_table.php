@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tailor_order', function (Blueprint $table) {
-            $table->id();
+        Schema::create('tailor_orders', function (Blueprint $table) {
 
-            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
+            $table->bigIncrements('order_id');
+
+            $table->foreignId('user_id')
+                ->references('user_id')
+                ->on('users')
+                ->restrictOnDelete();
 
             $table->date('date');
             $table->date('due_date');
-
             $table->string('garment_type');
             $table->string('garment_category');
             $table->string('material');
-
             $table->double('cost');
             $table->string('status');
-
             $table->text('chest')->nullable();
             $table->text('arm_length')->nullable();
             $table->text('shoulder')->nullable();
